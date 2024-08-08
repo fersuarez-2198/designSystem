@@ -1,0 +1,79 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap);
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Serif", serif;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.inputForm {
+  position: relative;
+}
+
+.form__input {
+  width: 100%;
+  height: 46px;
+  border: 2px solid #c9bfbf;
+  border-radius: 2rem;
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+  padding: 1.25rem;
+  background: none;
+}
+
+.form__input:hover {
+  border-color: #adffff;
+}
+
+.form__input:focus {
+  border-color: #008f8d;
+}
+
+.form__label {
+  position: absolute;
+  left: 1rem;
+  top: 0.7rem;
+  padding: 0 0.5rem;
+  cursor: text;
+  transition:
+    top 200ms ease-in,
+    top 200ms ease-in,
+    font-size 200ms ease-in;
+  background-color: white;
+  color: #c9bfbf;
+}
+
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+  top: -0.5rem;
+  font-size: 0.8rem;
+  left: 0.8rem;
+  color: black;
+}
+
+.field-error-message {
+  color: red;
+  font-size: 14px;
+}
+
+.input__error {
+  border: 2px solid red;
+  color: red;
+}
+
+.input__success {
+  border: 2px solid green;
+  color: green;
+}
+
+
+/*# sourceMappingURL=components-Field-Field-stories.001eb544.chunk.css.map*/
