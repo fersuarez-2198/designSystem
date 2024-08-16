@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+
+:root {
+  --error: #ff7569;
+  --warning: #e6b600;
+  --loading: #023535;
+  --success: #0caba8;
+  --closeButton: #c9bfbf;
+}
+
+body {
+  font-family: "Noto Serif", serif;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  color: var(--loading);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  max-width: 400px;
+  font-family: "Noto Serif", serif;
+}
+
+.toast_closeButton {
+  color: var(--closeButton);
+}
+
+.toast-icon {
+  margin-right: 10px;
+}
+
+.toast_errorIcon {
+  color: var(--error);
+}
+
+.toast_warIcon {
+  color: var(--warning);
+}
+
+.toast_loadIcon {
+  color: var(--loading);
+}
+
+.toast_succIcon {
+  color: var(--success);
+}
+
+.toast-message {
+  flex-grow: 1;
+  white-space: nowrap; /* Evita saltos de línea */
+  overflow: hidden; /* Oculta el desbordamiento */
+  text-overflow: ellipsis; /* Muestra "..." si el texto es demasiado largo */
+  padding-right: 40px;
+}
+
+.toast-close {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.toast-error {
+  border-top: 5px solid var(--error);
+}
+
+.toast-warning {
+  border-top: 5px solid var(--warning);
+}
+
+.toast-loading {
+  border-top: 5px solid var(--loading);
+}
+
+.toast-success {
+  border-top: 5px solid var(--success);
+}

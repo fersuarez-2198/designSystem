@@ -67,3 +67,10 @@ Variant7.args = {
   className: "button-variant7",
   width: '120px',
 };
+
+export const Variant8 = Template.bind({});
+Variant8.args = {
+  label: "Variant 7",
+  className: "button-variant8",
+  width: '120px',
+};

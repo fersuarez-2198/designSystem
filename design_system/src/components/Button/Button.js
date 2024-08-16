@@ -17,7 +17,7 @@ const ButtonDS = ({
   const style = hasText
     ? {
         width: width || "180px", // Valor predeterminado si no se proporciona `width`
-        height: "46px",
+        height: "36px",
         borderRadius: "20px",
       }
     : {
