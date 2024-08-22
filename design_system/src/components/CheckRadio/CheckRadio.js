@@ -1,7 +1,7 @@
 import React from "react";
 import "./CheckRadio.css";
 
-const CheckRadio = ({
+const CheckRadioDS = ({
   label,
   hasLabel,
   type = "checkbox",
@@ -27,4 +27,4 @@ const CheckRadio = ({
   );
 };
 
-export default CheckRadio;
+export default CheckRadioDS;

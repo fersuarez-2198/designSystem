@@ -1,9 +1,9 @@
 import React from "react";
-import Popup from "./Popup";
+import PopupDS from "./Popup";
 
 export default {
   title: "Components/Popup",
-  component: Popup,
+  component: PopupDS,
   parameters: {
     layout: "centered",
   },
@@ -18,7 +18,7 @@ export default {
   },
 };
 
-const Template = (args) => <Popup {...args} />;
+const Template = (args) => <PopupDS {...args} />;
 
 export const Medium = Template.bind({});
 Medium.args = {

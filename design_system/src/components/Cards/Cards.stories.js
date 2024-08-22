@@ -1,9 +1,9 @@
 import React from "react";
-import Card from "./Cards";
+import CardDS from "./Cards";
 
 export default {
   title: "Components/Card",
-  component: Card,
+  component: CardDS,
   parameters: {
     layout: "centered",
   },
@@ -17,7 +17,7 @@ export default {
   },
 };
 
-const Template = (args) => <Card {...args} />;
+const Template = (args) => <CardDS {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

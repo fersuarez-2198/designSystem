@@ -1,7 +1,7 @@
 import React from "react";
 import "./Loader.css";
 
-const Loader = ({ height = "300" }) => {
+const LoaderDS = ({ height = "300" }) => {
   return (
     <div>
       <svg
@@ -52,4 +52,4 @@ const Loader = ({ height = "300" }) => {
   );
 };
 
-export default Loader;
+export default LoaderDS;

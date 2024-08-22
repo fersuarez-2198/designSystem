@@ -7,7 +7,7 @@ exports.default = void 0;
 var _react = _interopRequireDefault(require("react"));
 require("./CheckRadio.css");
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
-const CheckRadio = _ref => {
+const CheckRadioDS = _ref => {
   let {
     label,
     hasLabel,
@@ -32,4 +32,4 @@ const CheckRadio = _ref => {
     htmlFor: label
   }, hasLabel && label));
 };
-var _default = exports.default = CheckRadio;
+var _default = exports.default = CheckRadioDS;

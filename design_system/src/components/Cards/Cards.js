@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Cards.css";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 
-const Card = ({
+const CardDS = ({
   headerText,
   headerBackgroundColor = "#f5f5f5",
   headerTextColor = "#000",
@@ -46,4 +46,4 @@ const Card = ({
   );
 };
 
-export default Card;
+export default CardDS;

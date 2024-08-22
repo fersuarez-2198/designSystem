@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CheckRadio from "./CheckRadio";
+import CheckRadioDS from "./CheckRadio";
 import { fn } from "@storybook/test";
 
 export default {
@@ -9,7 +9,7 @@ export default {
   },
   tags: ["autodocs"],
   args: { onClick: fn() },
-  component: CheckRadio,
+  component: CheckRadioDS,
   argTypes: {
     label: { control: "text" },
     name: { control: "text" },
@@ -38,7 +38,7 @@ const Template = (args) => {
     args.onChange(e);
   };
 
-  return <CheckRadio {...args} checked={checked} onChange={handleChange} />;
+  return <CheckRadioDS {...args} checked={checked} onChange={handleChange} />;
 };
 
 export const Checkbox = Template.bind({});

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Field.css";
 
-const Field = ({
+const FieldDS = ({
   label,
   value: initialValue,
   onChange,
@@ -62,4 +62,4 @@ const Field = ({
   );
 };
 
-export default Field;
+export default FieldDS;

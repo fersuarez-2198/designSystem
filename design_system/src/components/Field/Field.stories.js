@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Field from "./Field";
+import FieldDS from "./Field";
 import { fn } from "@storybook/test";
 
 export default {
@@ -9,7 +9,7 @@ export default {
   },
   tags: ["autodocs"],
   args: { onClick: fn() },
-  component: Field,
+  component: FieldDS,
   argTypes: {
     label: {
       name: "label",
@@ -89,7 +89,7 @@ const Template = (args) => {
     args.onChange(e);
   };
 
-  return <Field {...args} value={value} onChange={handleChange} />;
+  return <FieldDS {...args} value={value} onChange={handleChange} />;
 };
 
 export const Default = Template.bind({});

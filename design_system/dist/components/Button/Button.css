@@ -58,3 +58,11 @@ body {
 .button-variant7 {
   background: linear-gradient(180deg, #070f26 0%, #1a2c60 100%);
 }
+
+.button-variant8 {
+  background: linear-gradient(
+    180deg,
+    #ff7569 0%,
+    rgba(255, 117, 105, 0.85) 100%
+  );
+}

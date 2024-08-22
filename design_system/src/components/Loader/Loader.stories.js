@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Loader from "./Loader";
+import LoaderDS from "./Loader";
 
 export default {
   title: "Components/Loader",
@@ -7,7 +7,7 @@ export default {
     layout: "centered",
   },
   tags: ["autodocs"],
-  component: Loader,
+  component: LoaderDS,
   argTypes: {
     height: { control: "text" },
   },
@@ -21,7 +21,7 @@ const Template = (args) => {
     args.onChange(e);
   };
 
-  return <Loader {...args} checked={checked} onChange={handleChange} />;
+  return <LoaderDS {...args} checked={checked} onChange={handleChange} />;
 };
 
 export const LoaderScreen = Template.bind({});

@@ -7,7 +7,7 @@ exports.default = void 0;
 var _react = _interopRequireDefault(require("react"));
 require("./Loader.css");
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
-const Loader = _ref => {
+const LoaderDS = _ref => {
   let {
     height = "300"
   } = _ref;
@@ -50,4 +50,4 @@ const Loader = _ref => {
     fill: "black"
   })))));
 };
-var _default = exports.default = Loader;
+var _default = exports.default = LoaderDS;

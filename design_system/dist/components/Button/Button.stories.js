@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.Variant7 = exports.Variant6 = exports.Variant5 = exports.Variant4 = exports.Variant3 = exports.Variant2 = exports.Variant1 = void 0;
+exports.default = exports.Variant8 = exports.Variant7 = exports.Variant6 = exports.Variant5 = exports.Variant4 = exports.Variant3 = exports.Variant2 = exports.Variant1 = void 0;
 var _Button = _interopRequireDefault(require("./Button"));
 var _test = require("@storybook/test");
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
@@ -74,5 +74,11 @@ const Variant7 = exports.Variant7 = Template.bind({});
 Variant7.args = {
   label: "Variant 7",
   className: "button-variant7",
+  width: '120px'
+};
+const Variant8 = exports.Variant8 = Template.bind({});
+Variant8.args = {
+  label: "Variant 7",
+  className: "button-variant8",
   width: '120px'
 };

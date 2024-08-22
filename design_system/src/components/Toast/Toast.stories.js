@@ -1,9 +1,9 @@
 import React from "react";
-import Toast from "./Toast";
+import ToastDS from "./Toast";
 
 export default {
   title: "Components/Toast",
-  component: Toast,
+  component: ToastDS,
   parameters: {
     layout: "centered",
   },
@@ -19,7 +19,7 @@ export default {
   },
 };
 
-const Template = (args) => <Toast {...args} />;
+const Template = (args) => <ToastDS {...args} />;
 
 export const Error = Template.bind({});
 Error.args = {

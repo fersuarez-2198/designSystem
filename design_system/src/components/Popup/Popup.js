@@ -3,7 +3,7 @@ import "./Popup.css";
 import CloseIcon from "@mui/icons-material/Close";
 import ButtonDS from "../Button/Button";
 
-const Popup = ({
+const PopupDS = ({
   size,
   showCloseButton,
   title,
@@ -49,4 +49,4 @@ const Popup = ({
   );
 };
 
-export default Popup;
+export default PopupDS;

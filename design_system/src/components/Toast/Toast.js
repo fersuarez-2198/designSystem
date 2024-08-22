@@ -6,7 +6,7 @@ import WarningIcon from '@mui/icons-material/Warning';
 import PendingIcon from '@mui/icons-material/Pending';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
-const Toast = ({ type, message, showCloseButton, duration }) => {
+const ToastDS = ({ type, message, showCloseButton, duration }) => {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
@@ -71,4 +71,4 @@ const Toast = ({ type, message, showCloseButton, duration }) => {
 };
 
 
-export default Toast;
+export default ToastDS;
