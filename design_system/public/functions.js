@@ -1,6 +1,14 @@
+// Archivo script.js
+function handleDownload() {
+    // Definir el contenido CSS por defecto
+    const contenidoCSS = `/* Estilos por defecto para tu app, acá le ponemos algo bien bonito :) */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
-@import url('../../index.css');
-
+:root {
+  --principal-color: rgba(0, 255, 42, 0.514);
+  --secondary-color: rgb(192, 80, 76);
+  --third-color: rgb(146, 146, 0);
+  --small-size: 15px;
+}
 body {
   font-family: "Noto Serif", serif;
 }
@@ -60,4 +68,19 @@ body {
   background: linear-gradient(180deg,
       #ff7569 0%,
       rgba(255, 117, 105, 0.85) 100%);
+}
+`;
+
+    // Crear un objeto Blob con el contenido CSS
+    const blob = new Blob([contenidoCSS], { type: 'text/css' });
+
+    // Crear un enlace temporal para la descarga
+    const enlace = document.createElement('a');
+    enlace.href = URL.createObjectURL(blob);
+    enlace.download = 'nttdata-desing-system__styles.css';  // Nombre del archivo que se descargará
+
+    // Añadir el enlace al DOM, hacer clic y luego removerlo
+    document.body.appendChild(enlace);
+    enlace.click();
+    document.body.removeChild(enlace);
 }
