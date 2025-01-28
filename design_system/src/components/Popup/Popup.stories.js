@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PopupDS from "./Popup";
 
 export default {
@@ -11,14 +11,27 @@ export default {
   argTypes: {
     size: { control: "select", options: ["medium", "large"] },
     showCloseButton: { control: "boolean" },
-    title: { control: "text" },// Acepta texto simple para Storybook, pero usaremos JSX en las historias
+    title: { control: "text" },
+    body: { control: "text" },
     acceptText: { control: "text" },
     showRejectButton: { control: "boolean" },
     rejectText: { control: "text" },
+    isVisible: { control: "boolean" },
+    onClose: { action: "closed" },
   },
 };
 
-const Template = (args) => <PopupDS {...args} />;
+const Template = (args) => {
+  const [isVisible, setIsVisible] = useState(args.isVisible);
+
+  const handleClose = () => {
+    setIsVisible(false);
+  };
+
+  return (
+    <PopupDS {...args} isVisible={isVisible} onClose={handleClose} />
+  );
+};
 
 export const Medium = Template.bind({});
 Medium.args = {
@@ -30,9 +43,12 @@ Medium.args = {
       <p>Este es el cuerpo del popup. Puede contener texto, imágenes, o cualquier otro contenido.</p>
       <img src="https://via.placeholder.com/150" alt="Example" />
     </div>
-  ), // Ahora puedes pasar JSX directamente a `body`
+  ),
   acceptText: "Aceptar",
+  showRejectButton: false,
+  isVisible: true,
   onAccept: () => alert("Aceptar"),
+  onReject: () => alert("Rechazar"),
 };
 
 export const LargeWithReject = Template.bind({});
@@ -45,9 +61,11 @@ LargeWithReject.args = {
       <p>Este es el cuerpo del popup. Puede contener texto, imágenes, o cualquier otro contenido.</p>
       <img src="https://via.placeholder.com/150" alt="Example" />
     </div>
-  ), // Pasar contenido JSX más complejo
+  ),
   acceptText: "Aceptar",
   rejectText: "Rechazar",
+  showRejectButton: true,
+  isVisible: true, 
   onAccept: () => alert("Aceptar"),
   onReject: () => alert("Rechazar"),
 };

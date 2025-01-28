@@ -1,3 +1,4 @@
+/* Overlay con transiciones para mostrar y ocultar y con efecto de blur */
 .popup-overlay {
   position: fixed;
   top: 0;
@@ -9,8 +10,21 @@
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+  backdrop-filter: blur(8px); /* Añade el efecto de desenfoque al fondo */
 }
 
+/* Mostrar el overlay con animación */
+.popup-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Popup con transiciones de apertura y cierre */
 .popup {
   background-color: #fff;
   border-radius: 8px;
@@ -18,8 +32,20 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   position: relative;
   text-align: center;
+  transform: scale(0.8); /* Tamaño reducido inicialmente */
+  opacity: 0; /* Invisibilidad inicial */
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease; /* Transiciones para tamaño y opacidad */
 }
 
+/* Mostrar el popup con animación */
+.popup.show {
+  transform: scale(1); /* Tamaño normal al mostrar */
+  opacity: 1; /* Visibilidad completa */
+}
+
+/* Tamaños del popup */
 .popup-medium {
   width: 300px;
 }
@@ -28,6 +54,7 @@
   width: 500px;
 }
 
+/* Botón de cierre */
 .popup-close {
   background: none;
   border: none;
@@ -39,15 +66,18 @@
   top: 10px;
 }
 
+/* Título del popup */
 .popup-title {
   font-size: 18px;
   margin-bottom: 15px;
 }
 
+/* Cuerpo del popup */
 .popup-body {
   margin-bottom: 20px;
 }
 
+/* Footer del popup */
 .popup-footer {
   display: flex;
   justify-content: center;
